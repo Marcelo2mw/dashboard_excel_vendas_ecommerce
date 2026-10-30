@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "appName": "Vendas_eCommerce",
+  "title": "Painel de Vendas",
+  "ribbonTab": "Dashboard",
+  "ribbonGroup": "Painel",
+  "ribbonButton": "Abrir dashboard",
+  "entryHtml": "index.html",
+  "workbookFile": "Vendas_eCommerce.xlsx",
+  "panelHost": "form",
+  "pane": {},
+  "window": {
+    "borderStyle": "None",
+    "width": 1600,
+    "height": 900,
+    "minWidth": 1280,
+    "minHeight": 720,
+    "startPosition": "CenterScreen",
+    "state": "Maximized"
+  }
+}

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Painel de Vendas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="viewport">
+  <div id="palco" data-estado="carregando">
+    <div id="barra-progresso" class="interface" role="progressbar" aria-label="Tempo até a próxima página" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <div id="progresso"></div>
+    </div>
+
+    <header id="cabecalho" class="cabecalho interface">
+      <div class="marca">
+        <svg class="marca-icone" viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+            <linearGradient id="marca-gradiente" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#38bdf8"/>
+              <stop offset="1" stop-color="#a78bfa"/>
+            </linearGradient>
+          </defs>
+          <rect width="64" height="64" rx="15" fill="url(#marca-gradiente)"/>
+          <path d="M0 39 C12 20 21 49 34 34 C45 21 51 27 64 18 V38 C50 44 47 40 38 50 C24 65 15 38 0 54 Z" fill="#edf2fa"/>
+        </svg>
+        <div>
+          <div id="empresa" class="empresa">Painel de Vendas</div>
+          <div class="marca-subtitulo">Painel de vendas</div>
+        </div>
+      </div>
+
+      <div class="cabecalho-centro">
+        <h1 id="titulo-pagina">Visão Geral</h1>
+        <p id="pergunta-pagina"></p>
+        <p id="mensagem-pagina"></p>
+      </div>
+
+      <div id="periodo-container" class="periodo" tabindex="0" title="Alterar o mês de referência">
+        <strong id="periodo-label"></strong>
+        <span id="atualizado-em"></span>
+        <div id="seletor-mes" class="seletor-mes" role="group" aria-label="Mês de referência">
+          <div class="seletor-mes-titulo">Mês de referência</div>
+          <div id="seletor-mes-opcoes"></div>
+        </div>
+      </div>
+    </header>
+
+    <main id="trilho" class="trilho interface" aria-live="off"></main>
+
+    <footer class="navegacao interface">
+      <span id="estado-reproducao" class="estado-reproducao" hidden>Pausado</span>
+      <div id="pontos" class="pontos" aria-label="Páginas do dashboard"></div>
+      <span class="atalhos">← → navegar&nbsp;&nbsp;·&nbsp;&nbsp;espaço pausar</span>
+    </footer>
+
+    <div id="selo-atualizacao" class="selo-atualizacao" hidden>atualizando…</div>
+
+    <section id="tela-estado" class="tela-estado" aria-live="polite">
+      <svg class="estado-icone" viewBox="0 0 64 64" aria-hidden="true">
+        <defs>
+          <linearGradient id="estado-gradiente" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#38bdf8"/>
+            <stop offset="1" stop-color="#a78bfa"/>
+          </linearGradient>
+        </defs>
+        <rect width="64" height="64" rx="15" fill="url(#estado-gradiente)"/>
+        <path d="M0 39 C12 20 21 49 34 34 C45 21 51 27 64 18 V38 C50 44 47 40 38 50 C24 65 15 38 0 54 Z" fill="#edf2fa"/>
+      </svg>
+      <h2 id="nome-carregamento">Painel de Vendas</h2>
+      <p class="estado-subtitulo">Painel de Vendas</p>
+      <div id="carregando-anel" class="carregando-anel" aria-hidden="true"></div>
+      <p id="mensagem-estado">carregando dados…</p>
+    </section>
+  </div>
+</div>
+
+<script src="bridge.js"></script>
+<script src="dados.js"></script>
+<script src="graficos.js"></script>
+<script src="paginas.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

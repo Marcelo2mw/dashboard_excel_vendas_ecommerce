@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui">
+  <ribbon>
+    <tabs>
+      <tab id="TabDashboard" label="Dashboard" insertBeforeMso="TabHome">
+        <group id="GroupPainel" label="Painel">
+          <button id="btnOpenDashboard" label="Abrir dashboard" size="large"
+                  imageMso="NavigationPaneExcelFeature"
+                  screentip="Abrir o Painel de Vendas"
+                  onAction="OnClick" />
+        </group>
+        <group id="GroupNavegacao" label="Navegação">
+          <button id="btnDashboardPrev" label="Anterior" size="large"
+                  imageMso="PagePrevious"
+                  onAction="OnRibbonAction" tag="prev" />
+          <button id="btnDashboardPause" label="Pausar/Retomar" size="large"
+                  imageMso="MacroPlay"
+                  onAction="OnRibbonAction" tag="pause" />
+          <button id="btnDashboardNext" label="Próxima" size="large"
+                  imageMso="PageNext"
+                  onAction="OnRibbonAction" tag="next" />
+        </group>
+        <group id="GroupDados" label="Dados">
+          <button id="btnDashboardReload" label="Recarregar" size="large"
+                  imageMso="Refresh"
+                  onAction="OnRibbonAction" tag="reload" />
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>
